@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Our frame work -->
+    <link rel="stylesheet" href="css/framework.css" />
+    <!-- Our style file -->
+    <link rel="stylesheet" href="../Dashboard-main/css/main.css" />
+    <!-- Our font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;700&
+        family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dashboard</title>
+  </head>
+  <body>
+
+
+    
+    <div class="page d-flex">
+`
+  <!-- login -->
+  
+  
+  <!-- header -->   
+      <div class="sidebar bg-white p-20 p-relative">
+        <h3 class="p-relative txt-c mt-0">Seif</h3>
+        <ul class="p-0 list-none">
+          <li>
+            <a
+              href="index.html"
+              class="active d-flex align-center fs-14 c-black rad-6 p-10"
+            >
+              <i class="fa-regular fa-chart-bar fa-fw"></i>
+              <span class="hide-mobile">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="profile.html"
+              class="d-flex align-center fs-14 c-black rad-6 p-10"
+            >
+              <i class="fa-regular fa-user fa-fw"></i>
+              <span class="hide-mobile">Profile</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      <div class="content w-full">
+        <div class="head bg-white p-15 between-flex">
+          <div class="search p-relative">
+            <input
+              type="search"
+              class="p-10 rad-10"
+              name="search"
+              placeholder="Type A Keyword"
+            />
+          </div>
+          <div class="icons d-flex align-center">
+            <span class="notify p-relative">
+              <i class="fa-regular fa-bell fa-lg"></i>
+            </span>
+            <img src="imgs/avatar.png" alt="profile pic" />
+          </div>
+        </div>
+        <!-- End Head -->
+        <h1 class="p-relative">Dashboard</h1>
+        <div class="wrapper gap-20 grid-2 mb-20">
+          <!-- Start Welcome Widget -->
+          <div class="welcome bg-white rad-10 txt-c-mobile block-mobile">
+            <div class="intro p-20 d-flex space-between bg-eee rad-6">
+              <div>
+                <h2 class="m-0">Welcome</h2>
+                <p class="c-grey mt-5">Seif</p>
+              </div>
+              <img src="imgs/welcome.png" class="hide-mobile" alt="team" />
+            </div>
+            <img src="imgs/avatar.png" alt="man" class="avatar" />
+            <div class="body txt-c d-flex p-20 mt-20 mb-20 block-mobile">
+              <div>
+                Seif Shady
+                <span class="d-block c-grey fs-14 mt-10">traveler</span>
+              </div>
+              <div>
+                80 <span class="d-block c-grey fs-14 mt-10">Blogs</span>
+              </div>
+            </div>
+            <a
+              href="profile.html"
+              class="visit btn-shape d-block fs-14 bg-blue w-fit c-white"
+              >Profile</a
+            >
+          </div>
+          <!-- End Welcome Widget -->
+          <!-- Start Quick Draft Widget -->
+          <div class="quick-draft p-20 bg-white rad-10">
+            <h2 class="mt-0 mb-10">Your Travel</h2>
+            <p class="mt-0 mb-20 c-grey fs-15">Write About Your Travel</p>
+            <form action="">
+              <input
+                class="d-block mb-20 w-full p-10 b-none bg-eee rad-6"
+                type="text"
+                placeholder="Title"
+              />
+              <textarea
+                class="d-block mb-20 w-full bg-eee b-none rad-6 p-10"
+                placeholder="Your Travel"
+              ></textarea>
+              <input
+                class="save d-block fs-14 bg-blue c-white b-none w-fit btn-shape"
+                type="submit"
+                value="Save"
+              />
+            </form>
+          </div>
+          <!-- End Quick Draft Widgit -->
+          <!-- Start Latest News Widget  -->
+          <div class="latest-news p-20 bg-white rad-10 txt-c-mobile">
+            <h2 class="mt-0 mb-20">Latest Travels</h2>
+            <div class="news-row d-flex align-center">
+              <img src="./imgs/aswan.webp" alt="" />
+              <div class="info">
+                <h3>Aswan</h3>
+                <p class="m-0 fs-14 c-grey"> Serenity by the Nile, where history flows.</p>
+              </div>
+              <div class="label btn-shape bg-eee fs-13">1 Years Ago</div>
+            </div>
+            <div class="news-row d-flex align-center">
+              <img src="./imgs/alex.jpg" alt="" />
+              <div class="info">
+                <h3>Alexandria</h3>
+                <p class="m-0 fs-14 c-grey">The Mediterranean's pearl of ancient and modern charm</p>
+              </div>
+              <div class="label btn-shape bg-eee fs-13">2 Years Ago</div>
+            </div>
+            <div class="news-row d-flex align-center">
+              <img src="./imgs/pyramids.jpg" alt="" />
+              <div class="info">
+                <h3>Pyramids</h3>
+                <p class="m-0 fs-14 c-grey">Timeless wonders standing tall in the desert</p>
+              </div>
+              <div class="label btn-shape bg-eee fs-13">4 Years Ago</div>
+            </div>
+            <div class="news-row d-flex align-center">
+              <img src="./imgs/Tanta.avif" alt="" />
+              <div class="info">
+                <h3>Tanta</h3>
+                <p class="m-0 fs-14 c-grey">Heart of the Delta, where tradition and spirit unite.</p>
+              </div>
+              <div class="label btn-shape bg-eee fs-13">5 Years Ago</div>
+            </div>
+          </div>
+          <!-- End Latest News Widget  -->
+          
+          <!-- Start Top Search Word Widget -->
+          <div class="search-items p-20 bg-white rad-10">
+            <h2 class="mt-0 mb-20">Top Search City</h2>
+            <div class="items-head c-grey mb-10 between-flex">
+              <div>Keyword</div>
+              <div>Search Count</div>
+            </div>
+            <div class="items between-flex pt-15 pb-15">
+              <span>Cairo</span>
+              <span class="bg-eee fs-13 btn-shape">220</span>
+            </div>
+            <div class="items between-flex pt-15 pb-15">
+              <span>Alexandria</span>
+              <span class="bg-eee fs-13 btn-shape">180</span>
+            </div>
+            <div class="items between-flex pt-15 pb-15">
+              <span>Aswan</span>
+              <span class="bg-eee fs-13 btn-shape">160</span>
+            </div>
+            <div class="items between-flex pt-15 pb-15">
+              <span>Matrouh</span>
+              <span class="bg-eee fs-13 btn-shape">145</span>
+            </div>
+            <div class="items between-flex pt-15 pb-15">
+              <span>Elgouna</span>
+              <span class="bg-eee fs-13 btn-shape">110</span>
+            </div>
+            <div class="items between-flex pt-15 pb-15">
+              <span>Hurghada</span>
+              <span class="bg-eee fs-13 btn-shape">95</span>
+            </div>
+          </div>
+          <!-- End Top Search Word Widget -->
+          <!-- Start Last Post -->
+          <div class="last-post p-20 bg-white rad-10 p-relative">
+            <h2 class="mt-0 mb-25">Latest Post</h2>
+            <div class="top d-flex align-center">
+              <img class="avatar mr-15" src="imgs/avatar.png" alt="Pic" />
+              <div class="info">
+                <span class="d-block mb-5 fw-bold">Seif Shady</span>
+                <span class="c-grey">About 9 month Ago</span>
+              </div>
+            </div>
+            <div class="post-content txt-c-mobile pt-20 pb-20 mt-20 mb-20">
+                Aswan is a serene city on the Nile, famous for its ancient temples like Philae and Abu Simbel, the Aswan High Dam, and rich Nubian culture. Its natural beauty, with islands and desert landscapes, makes it a peaceful getaway
+            </div>
+            <div class="post-stats between-flex c-grey">
+              <div>
+                <i class="fa-regular fa-heart"></i>
+                <span>1.8k</span>
+              </div>
+              <div>
+                <i class="fa-regular fa-comments"></i>
+                <span>555</span>
+              </div>
+            </div>
+          </div>
+          <!-- End Last Post -->
+          <!-- Start Socila Media -->
+          <div class="social-media p-20 bg-white rad-10 p-relative">
+            <h2 class="mt-0 mb-25">Social Media Stats</h2>
+            <div class="box twitter p-15 p-relative mb-10 between-flex">
+              <i
+                class="fa-brands fa-twitter fa-2x c-white h-full center-flex"
+              ></i>
+              <span>90K Followers</span>
+              <a class="fs-13 c-white btn-shape" href="#">Follow</a>
+            </div>
+            <div class="box facebook p-15 p-relative mb-10 between-flex">
+              <i
+                class="fa-brands fa-facebook fa-2x c-white h-full center-flex"
+              ></i>
+              <span>150K Followers</span>
+              <a class="fs-13 c-white btn-shape" href="#">Like</a>
+            </div>
+            <div class="box youtube p-15 p-relative mb-10 between-flex">
+              <i
+                class="fa-brands fa-youtube fa-2x c-white h-full center-flex"
+              ></i>
+              <span>500K Subscriber</span>
+              <a class="fs-13 c-white btn-shape" href="#">Subscribe</a>
+            </div>
+            <div class="box linkedin p-15 p-relative mb-10 between-flex">
+              <i
+                class="fa-brands fa-linkedin fa-2x c-white h-full center-flex"
+              ></i>
+              <span>5K Followers</span>
+              <a class="fs-13 c-white btn-shape" href="#">Follow</a>
+            </div>
+          </div>
+          <!-- End Socila Media -->
+        </div>
+        <!-- End Wrapper -->
+        <!-- Start Projects Table -->
+        <div class="projects bg-white p-20 rad-10 m-20">
+          <h2 class="mt-0 mb-20">Travels</h2>
+          <div class="responsive-table">
+            <table class="w-full fs-15">
+              <thead>
+                <tr>
+                  <td>City</td>
+                  <td>Date</td>
+                  <td>Place</td>
+                  <td>Price</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Aswan</td>
+                  <td>3 Jan 2023</td>
+                  <td>Philae Temple</td>
+                  <td>$900</td>
+                </tr>
+                <tr>
+                  <td>Alexandria</td>
+                  <td>20 Jan 2022</td>
+                  <td>Bibliotheca Alexandrina</td>
+                  <td>$530</td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Giza</td>
+                  <td>10 Apr 2020</td>
+                  <td>Pyramids</td>
+                  <td>$30</td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Tanta</td>
+                  <td>25 May 2019</td>
+                  <td>Elsayed Elbadawy</td>
+                  <td>$50</td>
+                </tr>
+                <tr>
+                  <td>Hurghada</td>
+                  <td>25 May 2018</td>
+                  <td>Red sea</td>
+                  <td>$700</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- End Projects Table -->
+      </div>
+    </div>
+    <footer>
+      <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Contact</h3>
+                <a href="../contect/index.html">Contact</a>
+            </div>
+        </div>
+        
+    </section>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

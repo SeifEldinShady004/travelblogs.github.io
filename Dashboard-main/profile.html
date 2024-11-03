@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Our frame work -->
+    <link rel="stylesheet" href="css/framework.css" />
+    <!-- Our style file -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Our font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;700&
+      family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Profile</title>
+  </head>
+  <body>
+    <div class="page d-flex">
+      <header class="p-15">
+        <div id="menu-bar" class="fas fa-bars" onclick="showmenu()"></div>
+        <a href="../index.html" class="logo">TRAVEL <span style="color:#0080ff"; >blog</span></a>
+        <nav class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="../blog/blog.html">Blog</a>
+            <a href="index.html">Dashboard</a>
+            <!-- <a href="../contect/index.html">Contact</a> -->
+        </nav>
+        <div class="icon">
+            <i class="fas fa-user" onclick="showform()"></i>
+        </div>
+    </header>
+  
+    <div class="login-form">
+      <i class="fas fa-times" id="form-close" onclick="hideform()"></i>
+      <form action="">
+          <h3>login</h3>
+          <input type="email" class="box" placeholder="Enter your email">
+          <input type="password" class="box" placeholder="Enter your password">
+          <input type="submit" value="login now" class="btno">
+          <input type="checkbox" id="remember">
+          <label for="remember"> remember me</label>
+          <p>forget password? <a href="#">click here</a></p>
+          <p>don't have an account? <a href="#" onclick="showsignupform(); hideform(); return false;">sign up</a></p>
+      </form>
+  </div>
+    <div class="signup-form">
+      <i class="fas fa-times" id="signup-form-close" onclick="hidesignupform()"></i>
+      <form action="">
+          <h3>sign up</h3>
+          <input type="text" class="box" placeholder="Enter your name" required>
+          <input type="email" class="box" placeholder="Enter your email" required>
+          <input type="password" class="box" placeholder="Enter your password" required>
+          <input type="password" class="box" placeholder="Confirm your password" required>
+          <input type="submit" value="sign up now" class="btno">
+          <input type="checkbox" id="terms" required>
+          <label for="terms"> I agree to the terms and conditions</label>
+          <p>already have an account? <a href="#" onclick="showform(); hidesignupform(); return false;">login here</a></p>
+      </form>
+  </div>
+  <!-- login -->
+  
+  
+  <!-- header -->   
+      <div class="sidebar bg-white p-20 p-relative">
+        <h3 class="p-relative txt-c mt-0">Seif</h3>
+        <ul class="p-0 list-none">
+          <li>
+            <a
+              href="index.html"
+              class="d-flex align-center fs-14 c-black rad-6 p-10"
+            >
+              <i class="fa-regular fa-chart-bar fa-fw"></i>
+              <span class="hide-mobile">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="profile.html"
+              class="active d-flex align-center fs-14 c-black rad-6 p-10"
+            >
+              <i class="fa-regular fa-user fa-fw"></i>
+              <span class="hide-mobile">Profile</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="content w-full">
+        <div class="head bg-white p-15 between-flex">
+          <div class="search p-relative">
+            <input
+              type="search"
+              class="p-10 rad-10"
+              name="search"
+              placeholder="Type A Keyword"
+            />
+          </div>
+          <div class="icons d-flex align-center">
+            <span class="notify p-relative">
+              <i class="fa-regular fa-bell fa-lg"></i>
+            </span>
+            <img src="imgs/avatar.png" alt="profile pic" />
+          </div>
+        </div>
+        <!-- End Head -->
+        <h1 class="p-relative">Profile</h1>
+        <div
+          class="profile-info bg-white m-20 rad-6 d-flex align-center column-mobile"
+        >
+          <div class="level center-flex dir-column p-20">
+            <img src="imgs/avatar.png" alt="Profile Picture" />
+            <h3 class="mb-15 mt-15">Seif Shady</h3>
+            <p class="c-grey fw-bold">80 blogs</p>
+            <div class="prog">
+              <span data-progress="70"></span>
+            </div>
+            <div class="stars mb-15">
+              <i class="fa-solid fa-star c-orange fs-13"></i>
+              <i class="fa-solid fa-star c-orange fs-13"></i>
+              <i class="fa-solid fa-star c-orange fs-13"></i>
+              <i class="fa-solid fa-star c-orange fs-13"></i>
+              <i class="fa-solid fa-star c-orange fs-13"></i>
+            </div>
+            <p class="c-grey fs-13">Travels Rating</p>
+          </div>
+          <div class="info w-full">
+            <div class="box d-flex block-mobile p-20">
+              <p class="c-grey">General Information</p>
+              <p class="c-grey">Full Name: <span>Seif Shady</span></p>
+              <p class="c-grey">Gender: <span>Male</span></p>
+              <p class="c-grey">Country: <span>Egypt</span></p>
+              <label for="ch1">
+                <input
+                  type="checkbox"
+                  name="ch1"
+                  id="ch1"
+                  class="toggle-checkbox"
+                  checked
+                />
+                <div class="toggle-switch"></div>
+              </label>
+            </div>
+            <div class="box d-flex block-mobile p-20">
+              <p class="c-grey">Personal Information</p>
+              <p class="c-grey">Email: <span>SeifShady@gmail.com</span></p>
+              <p class="c-grey">Phone: <span>+201145659471</span></p>
+              <p class="c-grey">Date Of Birth: <span>31/5/2004</span></p>
+              <label for="ch2">
+                <input
+                  type="checkbox"
+                  name="ch2"
+                  id="ch2"
+                  class="toggle-checkbox"
+                />
+                <div class="toggle-switch"></div>
+              </label>
+            </div>
+            <div class="box d-flex block-mobile p-20">
+              <p class="c-grey">Job Information</p>
+              <p class="c-grey">Title: <span>Full Stack Developer</span></p>
+              <p class="c-grey">Programming Language: <span>Python</span></p>
+              <p class="c-grey">Years Of Experience: <span>5+</span></p>
+              <label for="ch3">
+                <input
+                  type="checkbox"
+                  name="ch3"
+                  id="ch3"
+                  class="toggle-checkbox"
+                  checked
+                />
+                <div class="toggle-switch"></div>
+              </label>
+            </div>
+            <div class="box d-flex block-mobile p-20">
+              <p class="c-grey">travels Payment</p>
+              <p class="c-grey">Payment Method: <span>Paypal</span></p>
+              <p class="c-grey">Email: <span>email@website.com</span></p>
+              <p class="c-grey">Subscription: <span>Monthly</span></p>
+              <label for="ch4">
+                <input
+                  type="checkbox"
+                  name="ch4"
+                  id="ch4"
+                  class="toggle-checkbox"
+                />
+                <div class="toggle-switch"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="other-data d-flex gap-20 m-20 column-mobile">
+          <div class="skills bg-white rad-6 p-20">
+            <h2 class="mb-10">My Travels</h2>
+            <p class="c-grey fs-14 mb-10">Complete Travels List</p>
+            <div class="skill-group pb-20 pt-20">
+              <ul class="center-flex-mobile">
+                <li class="btn-shape bg-eee">The Egyptian Museum</li>
+                <li class="btn-shape bg-eee">Cairo Citadel</li>
+                <li class="btn-shape bg-eee">Tahrir Square</li>
+              </ul>
+            </div>
+            <div class="skill-group pb-20 pt-20">
+              <ul class="center-flex-mobile">
+                <li class="btn-shape bg-eee">Bibliotheca Alexandrina</li>
+                <li class="btn-shape bg-eee">Qaitbay Citadel</li>
+                <li class="btn-shape bg-eee">Alexandria Corniche</li>
+              </ul>
+            </div>
+            <div class="skill-group pb-20 pt-20">
+              <ul class="center-flex-mobile">
+                <li class="btn-shape bg-eee">Al-Sayed Al-Badawi Mosque</li>
+                <li class="btn-shape bg-eee">Tanta Museum</li>
+              </ul>
+            </div>
+            <div class="skill-group pb-20 pt-20">
+              <ul class="center-flex-mobile">
+                <li class="btn-shape bg-eee">Abu Simbel</li>
+                <li class="btn-shape bg-eee">Philae Temple</li>
+                <li class="btn-shape bg-eee">Aswan High Dam</li>
+              </ul>
+            </div>
+            <div class="skill-group pb-10 pt-10">
+              <ul>
+                <li class="btn-shape bg-eee">Pyramids</li>
+                <li class="btn-shape bg-eee">Hurghada</li>
+                <li class="btn-shape bg-eee">Elgouna</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Activities -->
+          <div class="activities bg-white rad-6 p-20">
+            <h2 class="mb-10">Latest Travels</h2>
+            <p class="c-grey fs-14">Latest Travels Done By The Traveler</p>
+            <!-- Activity -->
+            <div
+              class="activity gap-20 mt-20 space-between d-flex align-center center-flex-mobile column-mobile"
+            >
+              <div class="data d-flex column-mobile align-center gap-20">
+                <div class="img">
+                  <img src="./imgs/aswan.webp" alt="Activity" />
+                </div>
+                <div class="activity-info txt-c-mobile">
+                  <p class="mb-10">Aswan</p>
+                  <p class="c-grey fs-14">Serenity by the Nile, where history flows.</p>
+                </div>
+              </div>
+              <div class="date txt-c">
+                <p class="mb-10">	3 Jan 2023</p>
+                <p class="c-grey fs-14">1 year</p>
+              </div>
+            </div>
+            <div
+              class="activity gap-20 mt-20 space-between d-flex align-center center-flex-mobile column-mobile"
+            >
+              <div class="data d-flex column-mobile align-center gap-20">
+                <div class="img">
+                  <img src="./imgs/alex.jpg" alt="Activity" />
+                </div>
+                <div class="activity-info txt-c-mobile">
+                  <p class="mb-10">Alexandia</p>
+                  <p class="c-grey fs-14">The Mediterranean's pearl of ancient and modern charm</p>
+                </div>
+              </div>
+              <div class="date txt-c">
+                <p class="mb-10">20 Jan 2022</p>
+                <p class="c-grey fs-14">2 Years</p>
+              </div>
+            </div>
+            <div
+              class="activity gap-20 mt-20 space-between d-flex align-center center-flex-mobile column-mobile"
+            >
+              <div class="data d-flex column-mobile align-center gap-20">
+                <div class="img">
+                  <img src="./imgs/pyramids.jpg" alt="Activity" />
+                </div>
+                <div class="activity-info txt-c-mobile">
+                  <p class="mb-10">Pyramids</p>
+                  <p class="c-grey fs-14">Timeless wonders standing tall in the desert</p>
+                </div>
+              </div>
+              <div class="date txt-c">
+                <p class="mb-10">10 Apr 2020</p>
+                <p class="c-grey fs-14">4 Years</p>
+              </div>
+            </div>
+            <div
+              class="activity gap-20 mt-20 space-between d-flex align-center center-flex-mobile column-mobile"
+            >
+              <div class="data d-flex column-mobile align-center gap-20">
+                <div class="img">
+                  <img src="./imgs/Tanta.avif" alt="Activity" />
+                </div>
+                <div class="activity-info txt-c-mobile">
+                  <p class="mb-10">Tanta</p>
+                  <p class="c-grey fs-14">Heart of the Delta, where tradition and spirit unite.</p>
+                </div>
+              </div>
+              <div class="date txt-c">
+                <p class="mb-10">25 May 2019</p>
+                <p class="c-grey fs-14">5 Years</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- <footer> -->
+      <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Contact</h3>
+                <a href="../contect/index.html">Contact</a>
+            </div>
+        </div>
+        
+    </section>
+    
+    <script src="js/main.js"></script>
+  </body>
+</html>
