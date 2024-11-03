@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/all.css"> -->
+</head>
+
+<body>
+    <header>
+        <div id="menu-bar" class="fas fa-bars" onclick="showmenu()"></div>
+        <a href="../index.html" class="logo">TRAVEL <span>blog</span></a>
+        <nav class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="../blog/blog.html">Blog</a>
+            <a href="../Dashboard-main/index.html">Dashboard</a>
+        </nav>
+        <div class="icon">
+            <i class="fas fa-user" onclick="showform()"></i>
+        </div>
+    </header>
+
+    <div class="space"></div>
+
+    <!-- Login Form -->
+    <div class="login-form">
+        <i class="fas fa-times" id="form-close" onclick="hideform()"></i>
+        <form action="">
+            <h3>Login</h3>
+            <input type="email" class="box" placeholder="Enter your email" required>
+            <input type="password" class="box" placeholder="Enter your password" required>
+            <input type="submit" value="Login Now" class="btno">
+            <input type="checkbox" id="remember">
+            <label for="remember"> Remember me</label>
+            <p>Forgot password? <a href="#">Click here</a></p>
+            <p>Don't have an account? <a href="#" onclick="showsignupform(); hideform(); return false;">Sign up</a></p>
+        </form>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="signup-form">
+        <i class="fas fa-times" id="signup-form-close" onclick="hidesignupform()"></i>
+        <form action="">
+            <h3>Sign Up</h3>
+            <input type="text" class="box" placeholder="Enter your name" required>
+            <input type="email" class="box" placeholder="Enter your email" required>
+            <input type="password" class="box" placeholder="Enter your password" required>
+            <input type="password" class="box" placeholder="Confirm your password" required>
+            <input type="submit" value="Sign Up Now" class="btno">
+            <input type="checkbox" id="terms" required>
+            <label for="terms"> I agree to the terms and conditions</label>
+            <p>Already have an account? <a href="#" onclick="showform(); hidesignupform(); return false;">Login here</a></p>
+        </form>
+    </div>
+
+    <!-- Search Filter -->
+    <div class="container mt-4">
+        <div class="row">
+            <input type="text" placeholder="Search for your Destination" class="w-100 d-block py-2 my-2" id="searchInput" onkeyup="searchBlog()">
+        </div>
+        <button id="addBlog" class="btn btn-outline-primary d-block mx-auto">
+            ADD BLOG
+        </button>
+    </div>
+
+    <!-- Add/Edit Blog Modal -->
+    <div id="test" class="addBlogPage d-none">
+        <div id="newBlog">
+            <h5 id="modalTitle">New Blog</h5>
+            <input type="text" placeholder="Name" id="blogName">
+            <input type="text" placeholder="Destination" id="blogDestination">
+            <input type="text" placeholder="Title" id="blogTitle">
+            <input type="text" placeholder="Blog Brief" id="blogBrief">
+            <textarea id="blogDescription" cols="163" rows="10" placeholder="Description"></textarea>
+            <label for="blogImage">Images</label>
+            <input type="file" accept="image/*" id="blogImage">
+            <button class="btn btn-outline-success" id="saveBlogButton">SAVE</button>
+            <i class="fa-solid fa-xmark text-danger" id="close"></i>
+        </div>
+    </div>
+
+    <!-- Main Blog Section -->
+    <section class="blog-section container mt-5">
+        <h1 class="text-center">Explore Our Travel Experiences</h1>
+        <div class="row" id="blogPosts">
+            <!-- Blog Post 1 -->
+            <div class="col-lg-4 col-md-6 mb-4 blog-post" data-destination="Cairo">
+                <div class="card">
+                    <img src="./image/cairo.jpg" class="card-img-top" alt="Destination Image">
+                    <div class="card-body">
+                        <a href="../templete/cairo/index.html"><h5 class="card-title">Cairo</h5></a>
+                        <p class="card-text">Cairo is a vibrant metropolis where ancient landmarks like the Pyramids of Giza coexist with bustling markets and modern high-rises.</p>
+                    </div>
+                    <div class="editbtns">
+                        <i class="fa-solid fa-pen-to-square text-warning" onclick="editBlogPost(this)"></i>
+                        <i class="fa-regular fa-trash-can text-danger" onclick="deleteBlogPost(this)"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div class="col-lg-4 col-md-6 mb-4 blog-post" data-destination="Giza">
+                <div class="card">
+                    <img src="./image/giza3.jpg" class="card-img-top" alt="Destination Image">
+                    <div class="card-body">
+                        <a href="../templete/giza/index.html"><h5 class="card-title">Giza</h5></a>
+                        <p class="card-text">Giza is famous for its magnificent ancient monuments, including the Great Pyramids and the Sphinx.</p>
+                    </div>
+                    <div class="editbtns">
+                        <i class="fa-solid fa-pen-to-square text-warning" onclick="editBlogPost(this)"></i>
+                        <i class="fa-regular fa-trash-can text-danger" onclick="deleteBlogPost(this)"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 3 -->
+            <div class="col-lg-4 col-md-6 mb-4 blog-post" data-destination="Alexandria">
+                <div class="card">
+                    <!-- Image section -->
+                    <img src="./image/alex.jpg" class="card-img-top" alt="Image of Alexandria">
+                    
+                    <!-- Blog Post Details -->
+                    <div class="card-body">
+                        <a href="../templete/alex/index.html">
+                            <h5 class="card-title">Alexandria</h5>
+                        </a>
+                        <p class="card-text">Alexandria, a historic port city on Egypt's Mediterranean coast, is renowned for its rich cultural heritage.</p>
+                    </div>
+                    
+                    <!-- Edit and Delete Buttons -->
+                    <div class="d-flex justify-content-between p-2">
+                        <i class="fa-solid fa-pen-to-square text-warning" role="button" onclick="editBlogPost(this)" title="Edit"></i>
+                        <i class="fa-regular fa-trash-can text-danger" role="button" onclick="deleteBlogPost(this)" title="Delete"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 4 -->
+            <div class="col-lg-4 col-md-6 mb-4 blog-post" data-destination="Tanta">
+                <div class="card">
+                    <img src="./image/Tanta.avif" class="card-img-top" alt="Destination Image">
+                    <div class="card-body">
+                        <a href="../templete/tanta/index.html"><h5 class="card-title">Tanta</h5></a>
+                        <p class="card-text">Tanta is recognized for its vibrant local markets and religious landmarks.</p>
+                    </div>
+                    <div class="editbtns">
+                        <i class="fa-solid fa-pen-to-square text-warning" onclick="editBlogPost(this)"></i>
+                        <i class="fa-regular fa-trash-can text-danger" onclick="deleteBlogPost(this)"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 5 -->
+            <div class="col-lg-4 col-md-6 mb-4 blog-post" data-destination="Aswan">
+                <div class="card">
+                    <img src="./image/aswan.webp" class="card-img-top" alt="Destination Image">
+                    <div class="card-body">
+                        <a href="../templete/aswan/index.html"><h5 class="card-title">Aswan</h5></a>
+                        <p class="card-text">Aswan is celebrated for its picturesque landscapes and stunning temples like Philae and Abu Simbel.</p>
+                    </div>
+                    <div class="editbtns">
+                        <i class="fa-solid fa-pen-to-square text-warning" onclick="editBlogPost(this)"></i>
+                        <i class="fa-regular fa-trash-can text-danger" onclick="deleteBlogPost(this)"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Contact</h3>
+                <a href="../contect/index.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
